@@ -28,45 +28,38 @@
 
 <style lang="scss">
     header{
-        background-color: #0D0D0D;
+        width: 100%;
+        position: fixed;
+
         nav{
             @include flex(row, center, space-between, 0);
             padding: 2rem;
 
             a{
                 text-decoration: none;
-                text-transform: uppercase;
                 font-size: 1rem;
                 color: #ffffff;
+                pointer-events: all;
+                @include transition;
+
+                &:hover{
+                    filter: drop-shadow(0 0 1em #EC0B43);
+                }
             }
+
+            
 
             ul{
                 @include flex(row, center, center, 2rem);
                 list-style-type: none;
+                text-transform: uppercase;
             }
 
             .free_consult{
                 padding: 0.4375rem 1.5rem;
                 border-radius: 1.25rem;
                 outline: solid 1.5px #ffff;
-                position: relative;
-                overflow: hidden;
-
-                &::before{
-                    content: "";
-                    width: 200%;
-                    height: 200%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    scale: 0;
-                    background-color: orangered;
-                    @include transition;
-                }
-
-                &:hover::before{
-                    scale: 1;
-                }
+                text-transform: uppercase;
             }
         }
     }

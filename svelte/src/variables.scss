@@ -2,7 +2,7 @@
 $font-size: 3rem;
 
 @mixin transition{
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 @mixin flex($flex-direction, $align-items, $justify-content, $gap){
