@@ -39,6 +39,10 @@
     import circularText from "../../assets/best_customer_experience.svg"
     import heroimageOne from "../../assets/pexels-evg-kowalievska-1148955.jpg"
     import heroimageTwo from "../../assets/pexels-pixabay-276534.jpg"
+
+    let d = new Date(),
+        date = d.toLocaleTimeString()
+    
 </script>
 
 {#if viewportWidth >= 1024}
@@ -66,6 +70,13 @@
     <h1 class="bottom_text splt">
         comfort
     </h1>
+
+    <div class="hero_footer">
+        <p>Lagos,Nigeria {date}</p>
+        <p>Premium wood materials: <a href="#">Take a look</a></p>
+    </div>
+
+    <hr>
 </main>
 
 {:else if viewportWidth < 1024}
@@ -87,6 +98,11 @@
         @include flex(column, center, center, 0);
         position: relative;
         text-transform: uppercase;
+
+        hr{
+            width: 90%;
+            margin-top: 2rem;
+        }
 
         h1{
             font-size: clamp(6vw,12vw,10rem);
@@ -148,6 +164,21 @@
 
         .bottom_text{
            margin-top: -18vh;
+        }
+
+        .hero_footer{
+            width: 100%;
+            padding: 1rem;
+            @include flex(row, center, space-between, 0);
+
+            p{
+                color: white;
+
+                a{
+                    text-decoration: line-through;
+                    color: white
+                }
+            }
         }
 
     }

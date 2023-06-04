@@ -60,10 +60,6 @@
 
 <style lang="scss">
     header{
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-
         nav{
             @include flex(row, center, space-between, 0);
             padding: 2vw;
