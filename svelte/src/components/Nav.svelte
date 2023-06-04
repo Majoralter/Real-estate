@@ -60,6 +60,11 @@
 
 <style lang="scss">
     header{
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(.5rem);
+        z-index: 4;
+
         nav{
             @include flex(row, center, space-between, 0);
             padding: 2vw;

@@ -48,8 +48,8 @@
 {#if viewportWidth >= 1024}
 <main>
     <h1 class="top_heading splt">
-        We <span><img src="{heroimageOne}" alt="A chair" class="img"></span> Only
-        <img src="{circularText}" alt="" class="circular_text">
+        We <span><img src="{heroimageOne}" alt="A chair" class="img" loading="lazy"></span> Only
+        <img src="{circularText}" alt="" class="circular_text" loading="lazy">
     </h1>
 
     <div class="mid_text-container">
@@ -58,7 +58,7 @@
         </h1>
 
         <div class="overlay">
-            <img src="{heroimageTwo}" alt="A chair" class="img">
+            <img src="{heroimageTwo}" alt="A chair" class="img" loading="lazy">
         </div>
 
         <p>
@@ -106,7 +106,6 @@
 
         h1{
             font-size: clamp(6vw,12vw,10rem);
-            font-weight: 500;
             line-height: 13vw;
         }
 
@@ -168,7 +167,7 @@
 
         .hero_footer{
             width: 100%;
-            padding: 1rem;
+            padding: 0 4rem 2rem;
             @include flex(row, center, space-between, 0);
 
             p{
@@ -176,7 +175,11 @@
 
                 a{
                     text-decoration: line-through;
-                    color: white
+                    color: white;
+
+                &:hover{
+                    filter: drop-shadow(0 0 1em #EC0B43);
+                }
                 }
             }
         }
