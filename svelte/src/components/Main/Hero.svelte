@@ -28,12 +28,20 @@
         })
     })
 
+    let viewportWidth = window.innerWidth
+
+    window.addEventListener("resize", () =>{
+        viewportWidth = window.innerWidth
+        console.log(viewportWidth)
+    })
+
 
     import circularText from "../../assets/best_customer_experience.svg"
     import heroimageOne from "../../assets/pexels-evg-kowalievska-1148955.jpg"
     import heroimageTwo from "../../assets/pexels-pixabay-276534.jpg"
 </script>
 
+{#if viewportWidth >= 768}
 <main>
     <h1 class="top_heading splt">
         We <span><img src="{heroimageOne}" alt="A chair" class="img"></span> Only
@@ -61,6 +69,15 @@
     <img src="{circularText}" alt="" class="circular_text">
 </main>
 
+{:else if viewportWidth < 768}
+<main>
+    <p>
+        hello world!
+    </p>
+</main>
+
+{/if}
+
 <style lang="scss">
     main{
         height: 100vh;
@@ -69,7 +86,7 @@
         text-transform: uppercase;
 
         h1{
-            font-size: 9.6875rem;
+            font-size: clamp(3rem,10vw,10rem);
             font-weight: 400;
         }
 
@@ -88,8 +105,8 @@
 
         .circular_text{
             position: absolute;
-            right: 19%;
-            top: 20%;
+            right: 19vw;
+            top: 20vh;
             animation: rotate 5s linear infinite;
         }
 

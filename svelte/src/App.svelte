@@ -9,11 +9,11 @@
 <Nav />
 <Main />
 
-<section></section>
+<!-- <section></section>
 
 <style>
   section{
     background-color: orangered;
     height: 100vh;
   }
-</style>
+</style> -->
