@@ -47,10 +47,12 @@
         </div>
 
         <ul class:active={isActive}>
+            <hr>
             <li class="nav_links-mobile"><a href="#">Home</a></li>
             <li class="nav_links-mobile"><a href="#">For sale</a></li>
             <li class="nav_links-mobile"><a href="#">For rent</a></li>
             <li class="nav_links-mobile"><a href="#">About</a></li>
+            <hr>
         </ul>
     </nav>
     {/if}
@@ -64,7 +66,7 @@
 
         nav{
             @include flex(row, center, space-between, 0);
-            padding: 2rem;
+            padding: 2vw;
 
             a{
                 text-decoration: none;
@@ -154,6 +156,12 @@
 
                 a{
                     font-size: 5vw;
+                    color: #D6BA73;
+                }
+
+                hr{
+                    width: 200%;
+                    border: solid 1px #D6BA73;
                 }
             }
         }
