@@ -33,6 +33,7 @@
             <li class="nav_links"><a href="#">About</a></li>
         </ul>
 
+        <!-- svelte-ignore a11y-invalid-attribute -->
         <a href="#" class="free_consult">
             Free consult
         </a>
@@ -41,6 +42,7 @@
     {:else}
 
     <nav class="mobile_nav" class:active={isActive}>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="menu" on:click={handleClick}>
             <span class="menu_bar menu_item-one" class:active={isActive}></span>
             <span class="menu_bar menu_item-two" class:active={isActive}></span>
@@ -48,9 +50,13 @@
 
         <ul class:active={isActive}>
             <hr>
+            <!-- svelte-ignore a11y-invalid-attribute -->
             <li class="nav_links-mobile"><a href="#">Home</a></li>
+            <!-- svelte-ignore a11y-invalid-attribute -->
             <li class="nav_links-mobile"><a href="#">For sale</a></li>
+            <!-- svelte-ignore a11y-invalid-attribute -->
             <li class="nav_links-mobile"><a href="#">For rent</a></li>
+            <!-- svelte-ignore a11y-invalid-attribute -->
             <li class="nav_links-mobile"><a href="#">About</a></li>
             <hr>
         </ul>

@@ -73,6 +73,7 @@
 
     <div class="hero_footer">
         <p>Lagos,Nigeria {date}</p>
+        <!-- svelte-ignore a11y-invalid-attribute -->
         <p>Premium wood materials: <a href="#">Take a look</a></p>
     </div>
 
